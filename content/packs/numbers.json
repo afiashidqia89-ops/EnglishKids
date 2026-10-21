@@ -1,0 +1,134 @@
+{
+ "id": "numbers",
+ "title": "Angka",
+ "emoji": "🔢",
+ "kind": "word",
+ "items": [
+  {
+   "en": "zero",
+   "id": "nol",
+   "e": "0️⃣",
+   "l": 1
+  },
+  {
+   "en": "one",
+   "id": "satu",
+   "e": "1️⃣",
+   "l": 1
+  },
+  {
+   "en": "two",
+   "id": "dua",
+   "e": "2️⃣",
+   "l": 1
+  },
+  {
+   "en": "three",
+   "id": "tiga",
+   "e": "3️⃣",
+   "l": 1
+  },
+  {
+   "en": "four",
+   "id": "empat",
+   "e": "4️⃣",
+   "l": 1
+  },
+  {
+   "en": "five",
+   "id": "lima",
+   "e": "5️⃣",
+   "l": 1
+  },
+  {
+   "en": "six",
+   "id": "enam",
+   "e": "6️⃣",
+   "l": 1
+  },
+  {
+   "en": "seven",
+   "id": "tujuh",
+   "e": "7️⃣",
+   "l": 1
+  },
+  {
+   "en": "eight",
+   "id": "delapan",
+   "e": "8️⃣",
+   "l": 1
+  },
+  {
+   "en": "nine",
+   "id": "sembilan",
+   "e": "9️⃣",
+   "l": 1
+  },
+  {
+   "en": "ten",
+   "id": "sepuluh",
+   "e": "🔟",
+   "l": 1
+  },
+  {
+   "en": "eleven",
+   "id": "sebelas",
+   "e": "🔢",
+   "l": 2
+  },
+  {
+   "en": "twelve",
+   "id": "dua belas",
+   "e": "🔢",
+   "l": 2
+  },
+  {
+   "en": "twenty",
+   "id": "dua puluh",
+   "e": "🔢",
+   "l": 2
+  },
+  {
+   "en": "thirty",
+   "id": "tiga puluh",
+   "e": "🔢",
+   "l": 3
+  },
+  {
+   "en": "first",
+   "id": "pertama",
+   "e": "🥇",
+   "l": 3
+  },
+  {
+   "en": "second",
+   "id": "kedua",
+   "e": "🥈",
+   "l": 3
+  },
+  {
+   "en": "third",
+   "id": "ketiga",
+   "e": "🥉",
+   "l": 3
+  },
+  {
+   "en": "fifty",
+   "id": "lima puluh",
+   "e": "🔢",
+   "l": 4
+  },
+  {
+   "en": "one hundred",
+   "id": "seratus",
+   "e": "💯",
+   "l": 4
+  },
+  {
+   "en": "one thousand",
+   "id": "seribu",
+   "e": "🔢",
+   "l": 5
+  }
+ ]
+}

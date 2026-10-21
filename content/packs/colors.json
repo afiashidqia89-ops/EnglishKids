@@ -1,0 +1,86 @@
+{
+ "id": "colors",
+ "title": "Warna",
+ "emoji": "🎨",
+ "kind": "word",
+ "items": [
+  {
+   "en": "red",
+   "id": "merah",
+   "e": "🔴",
+   "l": 1
+  },
+  {
+   "en": "blue",
+   "id": "biru",
+   "e": "🔵",
+   "l": 1
+  },
+  {
+   "en": "yellow",
+   "id": "kuning",
+   "e": "🟡",
+   "l": 1
+  },
+  {
+   "en": "green",
+   "id": "hijau",
+   "e": "🟢",
+   "l": 1
+  },
+  {
+   "en": "black",
+   "id": "hitam",
+   "e": "⚫",
+   "l": 1
+  },
+  {
+   "en": "white",
+   "id": "putih",
+   "e": "⚪",
+   "l": 1
+  },
+  {
+   "en": "orange",
+   "id": "oranye",
+   "e": "🟠",
+   "l": 1
+  },
+  {
+   "en": "purple",
+   "id": "ungu",
+   "e": "🟣",
+   "l": 2
+  },
+  {
+   "en": "brown",
+   "id": "cokelat",
+   "e": "🟤",
+   "l": 2
+  },
+  {
+   "en": "pink",
+   "id": "merah muda",
+   "e": "🌸",
+   "l": 2
+  },
+  {
+   "en": "gray",
+   "id": "abu-abu",
+   "e": "🩶",
+   "l": 3
+  },
+  {
+   "en": "gold",
+   "id": "emas",
+   "e": "🥇",
+   "l": 4
+  },
+  {
+   "en": "silver",
+   "id": "perak",
+   "e": "🥈",
+   "l": 4
+  }
+ ]
+}

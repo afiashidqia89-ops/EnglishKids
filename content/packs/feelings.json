@@ -1,0 +1,164 @@
+{
+ "id": "feelings",
+ "title": "Perasaan & Sifat",
+ "emoji": "😊",
+ "kind": "word",
+ "items": [
+  {
+   "en": "happy",
+   "id": "senang",
+   "e": "😊",
+   "l": 1
+  },
+  {
+   "en": "sad",
+   "id": "sedih",
+   "e": "😢",
+   "l": 1
+  },
+  {
+   "en": "hungry",
+   "id": "lapar",
+   "e": "🤤",
+   "l": 1
+  },
+  {
+   "en": "thirsty",
+   "id": "haus",
+   "e": "🥤",
+   "l": 1
+  },
+  {
+   "en": "big",
+   "id": "besar",
+   "e": "🐘",
+   "l": 1
+  },
+  {
+   "en": "small",
+   "id": "kecil",
+   "e": "🐜",
+   "l": 1
+  },
+  {
+   "en": "hot",
+   "id": "panas",
+   "e": "🔥",
+   "l": 1
+  },
+  {
+   "en": "cold",
+   "id": "dingin",
+   "e": "🥶",
+   "l": 1
+  },
+  {
+   "en": "angry",
+   "id": "marah",
+   "e": "😠",
+   "l": 2
+  },
+  {
+   "en": "tired",
+   "id": "lelah",
+   "e": "🥱",
+   "l": 2
+  },
+  {
+   "en": "scared",
+   "id": "takut",
+   "e": "😨",
+   "l": 2
+  },
+  {
+   "en": "fast",
+   "id": "cepat",
+   "e": "🐆",
+   "l": 2
+  },
+  {
+   "en": "slow",
+   "id": "lambat",
+   "e": "🐌",
+   "l": 2
+  },
+  {
+   "en": "tall",
+   "id": "tinggi",
+   "e": "🦒",
+   "l": 2
+  },
+  {
+   "en": "short",
+   "id": "pendek",
+   "e": "🤏",
+   "l": 2
+  },
+  {
+   "en": "new",
+   "id": "baru",
+   "e": "🆕",
+   "l": 2
+  },
+  {
+   "en": "clean",
+   "id": "bersih",
+   "e": "✨",
+   "l": 3
+  },
+  {
+   "en": "old",
+   "id": "tua",
+   "e": "🕰️",
+   "l": 3
+  },
+  {
+   "en": "beautiful",
+   "id": "cantik",
+   "e": "🌺",
+   "l": 3
+  },
+  {
+   "en": "brave",
+   "id": "pemberani",
+   "e": "🦸",
+   "l": 4
+  },
+  {
+   "en": "kind",
+   "id": "baik hati",
+   "e": "💝",
+   "l": 4
+  },
+  {
+   "en": "excited",
+   "id": "bersemangat",
+   "e": "🤩",
+   "l": 4
+  },
+  {
+   "en": "bored",
+   "id": "bosan",
+   "e": "😑",
+   "l": 4
+  },
+  {
+   "en": "surprised",
+   "id": "terkejut",
+   "e": "😲",
+   "l": 4
+  },
+  {
+   "en": "proud",
+   "id": "bangga",
+   "e": "🏅",
+   "l": 5
+  },
+  {
+   "en": "curious",
+   "id": "penasaran",
+   "e": "🔍",
+   "l": 5
+  }
+ ]
+}

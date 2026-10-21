@@ -1,0 +1,92 @@
+{
+ "id": "fruits",
+ "title": "Buah",
+ "emoji": "🍎",
+ "kind": "word",
+ "items": [
+  {
+   "en": "apple",
+   "id": "apel",
+   "e": "🍎",
+   "l": 1
+  },
+  {
+   "en": "banana",
+   "id": "pisang",
+   "e": "🍌",
+   "l": 1
+  },
+  {
+   "en": "orange",
+   "id": "jeruk",
+   "e": "🍊",
+   "l": 1
+  },
+  {
+   "en": "mango",
+   "id": "mangga",
+   "e": "🥭",
+   "l": 1
+  },
+  {
+   "en": "grapes",
+   "id": "anggur",
+   "e": "🍇",
+   "l": 2
+  },
+  {
+   "en": "watermelon",
+   "id": "semangka",
+   "e": "🍉",
+   "l": 2
+  },
+  {
+   "en": "strawberry",
+   "id": "stroberi",
+   "e": "🍓",
+   "l": 2
+  },
+  {
+   "en": "pineapple",
+   "id": "nanas",
+   "e": "🍍",
+   "l": 2
+  },
+  {
+   "en": "lemon",
+   "id": "lemon",
+   "e": "🍋",
+   "l": 3
+  },
+  {
+   "en": "coconut",
+   "id": "kelapa",
+   "e": "🥥",
+   "l": 3
+  },
+  {
+   "en": "pear",
+   "id": "pir",
+   "e": "🍐",
+   "l": 3
+  },
+  {
+   "en": "peach",
+   "id": "persik",
+   "e": "🍑",
+   "l": 4
+  },
+  {
+   "en": "cherry",
+   "id": "ceri",
+   "e": "🍒",
+   "l": 4
+  },
+  {
+   "en": "avocado",
+   "id": "alpukat",
+   "e": "🥑",
+   "l": 4
+  }
+ ]
+}

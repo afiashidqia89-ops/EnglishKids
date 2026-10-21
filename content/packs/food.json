@@ -1,0 +1,116 @@
+{
+ "id": "food",
+ "title": "Makanan",
+ "emoji": "🍽️",
+ "kind": "word",
+ "items": [
+  {
+   "en": "rice",
+   "id": "nasi",
+   "e": "🍚",
+   "l": 1
+  },
+  {
+   "en": "bread",
+   "id": "roti",
+   "e": "🍞",
+   "l": 1
+  },
+  {
+   "en": "egg",
+   "id": "telur",
+   "e": "🥚",
+   "l": 1
+  },
+  {
+   "en": "milk",
+   "id": "susu",
+   "e": "🥛",
+   "l": 1
+  },
+  {
+   "en": "water",
+   "id": "air",
+   "e": "💧",
+   "l": 1
+  },
+  {
+   "en": "noodles",
+   "id": "mi",
+   "e": "🍜",
+   "l": 2
+  },
+  {
+   "en": "cheese",
+   "id": "keju",
+   "e": "🧀",
+   "l": 2
+  },
+  {
+   "en": "soup",
+   "id": "sup",
+   "e": "🍲",
+   "l": 2
+  },
+  {
+   "en": "cake",
+   "id": "kue",
+   "e": "🍰",
+   "l": 2
+  },
+  {
+   "en": "ice cream",
+   "id": "es krim",
+   "e": "🍦",
+   "l": 2
+  },
+  {
+   "en": "fried rice",
+   "id": "nasi goreng",
+   "e": "🍛",
+   "l": 3
+  },
+  {
+   "en": "sandwich",
+   "id": "roti lapis",
+   "e": "🥪",
+   "l": 3
+  },
+  {
+   "en": "juice",
+   "id": "jus",
+   "e": "🧃",
+   "l": 3
+  },
+  {
+   "en": "vegetable",
+   "id": "sayuran",
+   "e": "🥦",
+   "l": 3
+  },
+  {
+   "en": "breakfast",
+   "id": "sarapan",
+   "e": "🍳",
+   "l": 4
+  },
+  {
+   "en": "lunch",
+   "id": "makan siang",
+   "e": "🍱",
+   "l": 4
+  },
+  {
+   "en": "dinner",
+   "id": "makan malam",
+   "e": "🍽️",
+   "l": 4
+  },
+  {
+   "en": "delicious",
+   "id": "lezat",
+   "e": "😋",
+   "l": 5
+  }
+ ]
+}

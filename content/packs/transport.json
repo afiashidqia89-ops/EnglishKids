@@ -1,0 +1,98 @@
+{
+ "id": "transport",
+ "title": "Kendaraan",
+ "emoji": "🚗",
+ "kind": "word",
+ "items": [
+  {
+   "en": "car",
+   "id": "mobil",
+   "e": "🚗",
+   "l": 1
+  },
+  {
+   "en": "bus",
+   "id": "bus",
+   "e": "🚌",
+   "l": 1
+  },
+  {
+   "en": "bike",
+   "id": "sepeda",
+   "e": "🚲",
+   "l": 1
+  },
+  {
+   "en": "motorcycle",
+   "id": "sepeda motor",
+   "e": "🏍️",
+   "l": 2
+  },
+  {
+   "en": "train",
+   "id": "kereta api",
+   "e": "🚆",
+   "l": 2
+  },
+  {
+   "en": "plane",
+   "id": "pesawat",
+   "e": "✈️",
+   "l": 2
+  },
+  {
+   "en": "boat",
+   "id": "perahu",
+   "e": "⛵",
+   "l": 2
+  },
+  {
+   "en": "truck",
+   "id": "truk",
+   "e": "🚚",
+   "l": 2
+  },
+  {
+   "en": "taxi",
+   "id": "taksi",
+   "e": "🚕",
+   "l": 2
+  },
+  {
+   "en": "ship",
+   "id": "kapal",
+   "e": "🚢",
+   "l": 3
+  },
+  {
+   "en": "helicopter",
+   "id": "helikopter",
+   "e": "🚁",
+   "l": 3
+  },
+  {
+   "en": "station",
+   "id": "stasiun",
+   "e": "🚉",
+   "l": 3
+  },
+  {
+   "en": "ticket",
+   "id": "tiket",
+   "e": "🎫",
+   "l": 3
+  },
+  {
+   "en": "airport",
+   "id": "bandara",
+   "e": "🛫",
+   "l": 4
+  },
+  {
+   "en": "driver",
+   "id": "pengemudi",
+   "e": "🚖",
+   "l": 4
+  }
+ ]
+}
