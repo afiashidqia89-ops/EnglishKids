@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kuis Hewan Pintar</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:ui-rounded,"Baloo 2","Nunito",system-ui,sans-serif;background:linear-gradient(#cfeeff,#fff 60%);color:#2b2d42;min-height:100vh;overflow-x:hidden;user-select:none}
+#app{max-width:520px;margin:auto;padding:12px;padding-top:max(12px,env(safe-area-inset-top));padding-bottom:max(16px,env(safe-area-inset-bottom))}
+button{font:inherit;border:0;cursor:pointer;color:inherit}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.pill{background:#fff;border-radius:99px;padding:8px 14px;font-weight:800;box-shadow:0 3px 0 #cde}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.card{border-radius:26px;padding:12px 8px;color:#fff;font-weight:800;font-size:17px;box-shadow:0 6px 0 rgba(0,0,0,.2);transition:transform .08s}
+.card:active{transform:translateY(5px);box-shadow:none}
+.card b{display:block;font-size:48px;animation:bob 2.4s ease-in-out infinite}
+.card:nth-child(even) b{animation-delay:-1.2s}
+@keyframes bob{50%{transform:translateY(-7px) rotate(-6deg)}}
+.mascot{font-size:88px;text-align:center;animation:bob 1.8s ease-in-out infinite}
+.box{background:#fff;border-radius:28px;padding:18px;margin-top:10px;font-size:20px;line-height:1.55;box-shadow:0 5px 0 #cde}
+.opt{display:block;width:100%;margin:10px 0;padding:16px;border-radius:22px;background:#fff;font-size:21px;font-weight:800;box-shadow:0 5px 0 #cde}
+.opt:active{transform:translateY(4px)}
+.ok{background:#3cc47c!important;color:#fff;animation:pop .45s}
+.no{background:#ff5c5c!important;color:#fff;animation:shake .4s}
+@keyframes pop{50%{transform:scale(1.08)}}
+@keyframes shake{25%{transform:translateX(-9px)}75%{transform:translateX(9px)}}
+.go{display:block;width:100%;background:#4f9dff;color:#fff;border-radius:22px;padding:15px;font-size:21px;font-weight:800;box-shadow:0 5px 0 #2a6fd0;margin-top:12px}
+.fall{position:fixed;top:-50px;font-size:30px;animation:fall 3s linear forwards;pointer-events:none}
+@keyframes fall{to{transform:translateY(112vh) rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head><body><div id="app"></div>
+<script src="content.js"></script>
+<script>
+const S=SUBJECTS,$=id=>document.getElementById(id),A=document.getElementById('app'),h=x=>A.innerHTML=x,strip=t=>t.replace(/<[^>]+>/g,' ');
+let save=JSON.parse(localStorage.getItem('kh')||'{}'),mute=false,Q,AC;
+// --- suara (dibuat dengan WebAudio, tanpa file) ---
+function tone(f,t,d,type){try{if(mute)return;AC=AC||new(window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain(),s=AC.currentTime+t;o.type=type||'sine';o.frequency.value=f;g.gain.setValueAtTime(.16,s);g.gain.exponentialRampToValueAtTime(.001,s+d);o.connect(g);g.connect(AC.destination);o.start(s);o.stop(s+d)}catch(e){}}
+const snd={tap:()=>tone(560,0,.08),ok:()=>[523,659,784,1047].forEach((f,i)=>tone(f,i*.09,.2,'triangle')),no:()=>{tone(300,0,.15);tone(220,.13,.3)},win:()=>[523,659,784,659,784,1047].forEach((f,i)=>tone(f,i*.13,.28,'triangle'))};
+function say(t,l){if(mute||!window.speechSynthesis)return;if(l=='ar-SA')t=(t.match(/[\u0600-\u06FF]+/g)||[]).join(' ');if(!t)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(strip(t));u.lang=l;u.rate=.85;speechSynthesis.speak(u)}
+// --- layar ---
+function home(){const tot=Object.values(save).reduce((a,b)=>a+b,0);
+h(`<div class=bar><span class=pill>⭐ ${tot}</span><b style="font-size:21px">Kuis Hewan Pintar</b><button class=pill onclick="mute=!mute;home()">${mute?'🔇':'🔊'}</button></div>
+<div class=mascot>🐯</div><p style="text-align:center;font-weight:800;margin:0">Halo! Pilih pelajaran, ya!</p>
+<div class=grid>${S.map((s,i)=>`<button class=card style="background:${s.c}" onclick="snd.tap();sub(${i})"><b>${s.e}</b>${s.n}<br><small>${'⭐'.repeat(save[s.id]||0)||'&nbsp;'}</small></button>`).join('')}</div>`)}
+function sub(i){const s=S[i];
+h(`<div class=bar><button class=pill onclick="home()">⬅️</button><b style="font-size:22px">${s.n}</b><span></span></div><div class=mascot>${s.e}</div>
+<button class="card go" style="background:#4f9dff;font-size:24px;padding:20px" onclick="snd.tap();learn(${i},0)">📖 Belajar</button>
+<button class="card go" style="background:#3cc47c;box-shadow:0 6px 0 #1f8f55;font-size:24px;padding:20px" onclick="snd.tap();quiz(${i})">🎮 Kuis Seru</button>`)}
+function learn(i,k){const s=S[i],m=s.l[k],last=k+1>=s.l.length;
+h(`<div class=bar><button class=pill onclick="sub(${i})">⬅️</button><span class=pill>${k+1}/${s.l.length}</span><button class=pill onclick="say(S[${i}].l[${k}][1],S[${i}].v)">🔊</button></div>
+<div class=mascot>${s.e}</div><div class=box><h2 style="margin:0 0 8px">${m[0]}</h2>${m[1]}</div>
+<button class=go onclick="snd.tap();${last?`quiz(${i})`:`learn(${i},${k+1})`}">${last?'Coba Kuis 🎮':'Lanjut ➡️'}</button>`)}
+function quiz(i){Q={i,n:0,sc:0,q:[...S[i].q].sort(()=>Math.random()-.5)};ask()}
+function ask(){const s=S[Q.i],q=Q.q[Q.n],o=q[1].map((t,j)=>[t,j]).sort(()=>Math.random()-.5);Q.done=false;
+h(`<div class=bar><button class=pill onclick="sub(${Q.i})">⬅️</button><span class=pill>${Q.n+1}/${Q.q.length}</span><span class=pill>⭐ ${Q.sc}</span></div>
+<div class=mascot id=m>${s.e}</div><div class=box style="font-weight:800" onclick="say(Q.q[Q.n][0],S[Q.i].v)">${q[0]} <small>🔊</small></div>
+${o.map(([t,j])=>`<button class=opt data-j=${j} onclick="pick(this,${j})">${t}</button>`).join('')}<div id=fb></div>`)}
+function pick(b,j){if(Q.done)return;Q.done=true;const q=Q.q[Q.n],ok=j==q[2];b.classList.add(ok?'ok':'no');
+if(ok){Q.sc++;snd.ok()}else{snd.no();document.querySelector('.opt[data-j="'+q[2]+'"]').classList.add('ok')}
+$('m').textContent=ok?'🤩':'🥺';
+$('fb').innerHTML=`<div class=box>${ok?'Hebat! 🎉':'Belum tepat, semangat! 💪'}<br><small>${q[3]||''}</small></div><button class=go onclick="snd.tap();nxt()">${Q.n+1<Q.q.length?'Lanjut ➡️':'Selesai 🏁'}</button>`}
+function nxt(){Q.n++;Q.n<Q.q.length?ask():fin()}
+function fin(){const s=S[Q.i],st=Math.round(Q.sc/Q.q.length*5);save[s.id]=Math.max(save[s.id]||0,st);localStorage.setItem('kh',JSON.stringify(save));
+if(st>=3){snd.win();confetti()}else snd.tap();
+h(`<div class=mascot>${st>=4?'🏆':st>=2?'👏':'💪'}</div><div class=box style="text-align:center"><h2 style="margin:0">Benar ${Q.sc} dari ${Q.q.length}</h2><div style="font-size:36px">${'⭐'.repeat(st)||'🌱'}</div></div>
+<button class=go onclick="quiz(${Q.i})">🔁 Main lagi</button><button class=go style="background:#8e6bff;box-shadow:0 5px 0 #5b3fd0" onclick="learn(${Q.i},0)">📖 Belajar lagi</button><button class=go style="background:#3cc47c;box-shadow:0 5px 0 #1f8f55" onclick="home()">🏠 Beranda</button>`)}
+function confetti(){const E=['🎉','⭐','🐾','🎈'];for(let i=0;i<24;i++){const e=document.createElement('div');e.className='fall';e.textContent=E[i%4];e.style.left=Math.random()*94+'vw';e.style.animationDelay=Math.random()+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),4500)}}
+home();
+</script></body></html>
