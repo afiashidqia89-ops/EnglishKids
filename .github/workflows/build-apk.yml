@@ -1,4 +1,4 @@
-name: Hafalan APK
+name: Hafalan Anak APK
 on:
   push:
     branches: [main]
@@ -15,7 +15,11 @@ jobs:
       - name: Unduh teks & audio Juz Amma
         run: python3 tools/fetch_quran.py
       - run: npm install
+      - run: pip install pillow
       - run: npx cap add android
+      - name: Ikon & splash ramah anak
+        run: python3 tools/make_icons.py
+      - run: npx cap sync android
       - run: cd android && chmod +x gradlew && ./gradlew assembleDebug
       - uses: actions/upload-artifact@v4
         with:
